@@ -3,11 +3,10 @@ window.addEventListener('load', function(){
     let searchButton = document.querySelector(".searchButton");
     const search = searchButton.querySelector(".btn");
 
+    //Adding listener to search button
     search.addEventListener('click', function (element){
         element.preventDefault();
-
-
-        // let httpRequest = new XMLHttpRequest();
+        
         //Fetch API method
         let url = "http://localhost/info2180-lab4/info2180-lab4/superheroes.php";
         fetch(url)
@@ -28,28 +27,14 @@ window.addEventListener('load', function(){
             .catch(error => {
                 console.log(error);
             })
-        // httpRequest.onreadystatechange = loadData;
-        // httpRequest.open('GET', url);
-        // httpRequest.send();
-
-
+        
     })
-    // function loadData(){
-    //     if (httpRequest.readyState === XMLHttpRequest.DONE){
-    //         if (httpRequest.status === 200) {
-    //             let response = httpRequest.responseText;
-    //             let answers = document.querySelector(".answer");
-    //             alert(response);
-    //         }
-    //         else {
-    //             alert("There is an issue with the search request.")
-    //         }
-    //     }
+
+    // function searchSupers() {
+    //     let input = document.getElementById('searchbar').value
+    //     var supers = <?php echo json_encode($superheroes); ?>;
     // }
-
     
-       
-
-
+    
 
 });
